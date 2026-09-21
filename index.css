@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #fffaf5;
+    color: #222;
+}
+
+  /* Nav ---------------------------------------------*/
+
+nav {
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    box-shadow: 0 2px 10px #ddd;
+}
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #e85d04;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 25px;
+}
+
+
+/* hero and hero-text ------------------*/
+
+
+.hero {
+    min-height: 400px;
+    padding: 70px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffe8d6;
+}
+.hero-text {
+    max-height: 550px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.hero p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+
+/* Search ---------------------------*/
+
+.search {
+    display: flex;
+    max-width: 500px;
+}
+.search input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+.search button {
+    border: 0;
+    background: #e85d04;
+    color: white;
+    padding: 0 25px;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+}
+.hero img {
+    width: 350px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+  /* Section Reipes -------------------------------*/
+
+
+section {
+    padding: 50px 8%;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+.categories button {
+    padding: 10px 20px;
+    border: 1px solid #e85d04;
+    background: white;
+    color: #e85d04;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.categories button:hover {
+    background: #e85d04;
+    color: white;
+}
+
+/* Card Recipes ------------------------------*/
+
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #ddd;
+    transition: 3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 18px;
+}
+.card h3 {
+    margin-bottom: 8px;
+}
+.info {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.favorite {
+    float: right;
+    border: 0;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* footer  -------------------------------------------------------------*/
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* media -----------------------------------------------------------------*/
+
+@media(max-width:768px) {
+    nav {
+        padding: 0 5px;
+    }
+    nav div:last-child {
+        display: none;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 5%;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero img {
+        width: 100%;
+        max-width: 350px;
+    }
+    section {
+        padding: 40px 5%;
+    }
+    .recipes {
+        grid-template-columns: 1fr;
+    }
+}
